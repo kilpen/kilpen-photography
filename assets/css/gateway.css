@@ -61,24 +61,21 @@ html, body {
   z-index: 30;
   text-align: center;
   pointer-events: none;
-  mix-blend-mode: screen;
 }
-.wordmark {
-  font-family: var(--font-display);
-  font-weight: 800;
-  font-size: clamp(1.1rem, 2.4vw, 1.5rem);
-  letter-spacing: 0.32em;
-  color: #fff;
+.gw-logo {
   display: block;
+  width: clamp(150px, 20vw, 220px);
+  height: auto;
+  margin: 0 auto;
+  filter: drop-shadow(0 4px 18px rgba(0, 0, 0, 0.75));
 }
-.wordmark__pen { color: var(--flame-500); }
 .wordmark__sub {
   display: block;
   font-family: var(--font-mono);
   font-size: 0.6rem;
   letter-spacing: 0.62em;
   color: var(--ink-500);
-  margin-top: 0.35rem;
+  margin-top: 0.5rem;
   padding-left: 0.62em;
 }
 
