@@ -3,28 +3,327 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>360° Photo Booth — KilPen Photography</title>
+  <title>360° Photo Booth — KilPen Photography | Hawaii</title>
+  <meta name="description" content="KilPen Photography's 360° photo booth captures cinematic slow-motion reels your guests share instantly. Weddings, parties & brand activations across Hawaii. Check your date.">
   <meta name="theme-color" content="#121212">
+  <meta property="og:title" content="360° Photo Booth — KilPen Photography">
+  <meta property="og:description" content="Cinematic slow-motion 360° reels for weddings, parties & brand activations across Hawaii.">
+  <meta property="og:image" content="../assets/img/kilpen-penguin.png">
+  <link rel="icon" type="image/png" sizes="180x180" href="../assets/img/favicon-180.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png">
+  <link rel="apple-touch-icon" href="../assets/img/favicon-180.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;800&family=Inter:wght@400;500&family=Space+Mono&display=swap" rel="stylesheet">
-  <style>
-    :root{--char:#121212;--red:#a32424;--flame:#e25444;--stone:#f8f7f5;--ink:#9a9a9a}
-    *{margin:0;box-sizing:border-box}
-    body{background:var(--char);color:var(--stone);font-family:"Inter",sans-serif;min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:2rem;background-image:radial-gradient(120% 80% at 50% 0%,rgba(163,36,36,.22),transparent 55%)}
-    .eyebrow{font-family:"Space Mono",monospace;font-size:.7rem;letter-spacing:.3em;color:var(--flame);margin-bottom:1.2rem}
-    h1{font-family:"Sora",sans-serif;font-weight:800;font-size:clamp(2.4rem,7vw,4.5rem);line-height:1;letter-spacing:-.02em;margin-bottom:1.2rem}
-    p{max-width:34rem;color:#cfcfcf;line-height:1.6;margin-bottom:2.2rem}
-    .tag{font-family:"Space Mono",monospace;font-size:.7rem;letter-spacing:.25em;color:var(--ink);border:1px solid rgba(255,255,255,.15);border-radius:999px;padding:.5rem 1.1rem;margin-bottom:2.4rem}
-    a{color:var(--flame);text-decoration:none;font-family:"Sora",sans-serif;font-weight:600}
-    a:hover{color:#fff}
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/booth.css">
 </head>
 <body>
-  <span class="tag">PAGE IN DEVELOPMENT</span>
-  <span class="eyebrow">● SERVICE 01 — IMMERSIVE</span>
-  <h1>360° Photo Booth</h1>
-  <p>Cinematic slow-motion reels for weddings, parties &amp; brand activations. Full page coming per spec §5 — what&nbsp;it&nbsp;is, how it works, real reels, guest tips, and a date-aware quote request.</p>
-  <a href="../">← Back to gateway</a>
+
+  <!-- ===== Nav ===== -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a class="nav__brand" href="../" aria-label="KilPen Photography home">
+        <img src="../assets/img/kilpen-wordmark-dark.png" alt="KilPen Photography" height="30">
+      </a>
+      <nav class="nav__links" id="navLinks" aria-label="Primary">
+        <a href="#what">What it is</a>
+        <a href="#how">How it works</a>
+        <a href="#reels">Reels</a>
+        <a href="#events">Events</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <div class="nav__actions">
+        <a href="../drone/" class="nav__switch"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M4 8h13l-4-4M20 16H7l4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Drone</a>
+        <a href="#quote" class="btn btn--primary btn--sm">Check My Date</a>
+      </div>
+      <button class="nav__toggle" id="navToggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <!-- ===== Hero ===== -->
+  <section class="hero">
+    <div class="hero__glow" aria-hidden="true"></div>
+    <div class="hero__grid">
+      <div class="hero__copy">
+        <span class="eyebrow"><i class="dot"></i>360° PHOTO BOOTH · HAWAII</span>
+        <h1 class="hero__title">Your guests,<br><span class="grad">in cinematic 360°.</span></h1>
+        <p class="hero__sub">Step onto the platform, strike a pose, and our motorized booth sweeps around you — capturing slow-motion video that looks like a scene from a music video. Shared to their phones in seconds.</p>
+        <div class="hero__cta">
+          <a href="#quote" class="btn btn--primary">Check My Date</a>
+          <a href="#reels" class="btn btn--ghost">Watch reels</a>
+        </div>
+        <p class="hero__trust">Weddings · Parties · Corporate &amp; brand activations · Nightlife</p>
+      </div>
+
+      <!-- Placeholder reel: a phone-framed 360 reel mockup (swap for a real vertical reel loop) -->
+      <div class="hero__reel" aria-hidden="true">
+        <div class="phone">
+          <div class="phone__notch"></div>
+          <div class="phone__screen">
+            <div class="reelfx">
+              <div class="reelfx__ring"></div>
+              <div class="reelfx__subject"></div>
+              <span class="reelfx__c reelfx__c1"></span>
+              <span class="reelfx__c reelfx__c2"></span>
+              <span class="reelfx__c reelfx__c3"></span>
+              <span class="reelfx__c reelfx__c4"></span>
+              <span class="reelfx__c reelfx__c5"></span>
+            </div>
+            <div class="phone__hud">
+              <span class="phone__rec"><i></i>REC</span>
+              <span>360° · SLO-MO · 240 FPS</span>
+            </div>
+          </div>
+        </div>
+        <div class="corner corner--tl"></div>
+        <div class="corner corner--br"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== What is a 360 booth ===== -->
+  <section class="section" id="what">
+    <div class="container narrow center">
+      <span class="eyebrow center"><i class="dot"></i>THE EXPERIENCE</span>
+      <h2 class="section__title">What is a 360° photo booth?</h2>
+      <p class="lede">Guests stand on a platform while a camera mounted to a rotating arm spins around them, capturing slow-motion video from every angle — head to toe. Unlike a traditional booth that snaps a still photo, a 360° booth creates immersive, share-ready <em>video</em>. Every clip looks like a moment out of a music video, and it&rsquo;s on your guests&rsquo; phones seconds later.</p>
+    </div>
+  </section>
+
+  <!-- ===== Why / four pillars ===== -->
+  <section class="section section--alt" id="why">
+    <div class="container">
+      <span class="eyebrow center"><i class="dot"></i>WHY GUESTS LOVE IT</span>
+      <h2 class="section__title center">Not a photo. A moment.</h2>
+      <div class="pillars">
+        <article class="pillar reveal">
+          <div class="pillar__icon"><svg viewBox="0 0 24 24"><path d="M12 2v4M12 18v4M2 12h4M18 12h4M5 5l3 3M16 16l3 3M19 5l-3 3M8 16l-3 3"/><circle cx="12" cy="12" r="3"/></svg></div>
+          <h3>Interactive</h3>
+          <p>Guests don&rsquo;t just pose — they move, dance, and perform. Everyone wants a turn.</p>
+        </article>
+        <article class="pillar reveal delay-1">
+          <div class="pillar__icon"><svg viewBox="0 0 24 24"><path d="M4 12v7a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-7M16 6l-4-4-4 4M12 2v13"/></svg></div>
+          <h3>Shareable</h3>
+          <p>Vertical, platform-ready clips built for Instagram Reels and TikTok. Instant sharing.</p>
+        </article>
+        <article class="pillar reveal delay-2">
+          <div class="pillar__icon"><svg viewBox="0 0 24 24"><path d="M3 5h18v14H3z"/><path d="M3 9h18M8 5v4"/><circle cx="12" cy="14" r="2.5"/></svg></div>
+          <h3>Cinematic</h3>
+          <p>Crisp, high-frame-rate slow motion from pro capture gear. Clean, glossy, unforgettable.</p>
+        </article>
+        <article class="pillar reveal delay-3">
+          <div class="pillar__icon"><svg viewBox="0 0 24 24"><path d="M12 2l2.4 4.9 5.4.8-3.9 3.8.9 5.4L12 15.4 7.2 17.9l.9-5.4L4.2 8.7l5.4-.8z"/></svg></div>
+          <h3>Customizable</h3>
+          <p>Your logo, colors, hashtag, and theme baked into every clip — branded overlays included.</p>
+        </article>
+      </div>
+      <p class="spec-note center"><span class="mono">SPEC</span> 15–30&nbsp;sec clips · HD / DSLR capture · up to 240&nbsp;fps slow motion · delivered to phones in seconds</p>
+    </div>
+  </section>
+
+  <!-- ===== How it works ===== -->
+  <section class="section" id="how">
+    <div class="container">
+      <span class="eyebrow center"><i class="dot"></i>HOW IT WORKS</span>
+      <h2 class="section__title center">From platform to post in minutes</h2>
+      <ol class="steps">
+        <li class="step reveal"><span class="step__n">01</span><h3>Step on</h3><p>Up to five guests hop onto the LED platform.</p></li>
+        <li class="step reveal delay-1"><span class="step__n">02</span><h3>The arm spins</h3><p>Our motorized arm sweeps the camera 360° around you.</p></li>
+        <li class="step reveal delay-2"><span class="step__n">03</span><h3>Slow-mo capture</h3><p>High-frame-rate video freezes every jump, spin, and toss.</p></li>
+        <li class="step reveal delay-3"><span class="step__n">04</span><h3>Branded &amp; edited</h3><p>Music, your overlay, and effects applied on the spot.</p></li>
+        <li class="step reveal delay-4"><span class="step__n">05</span><h3>Shared instantly</h3><p>Guests grab their reel by QR, text, or email — ready to post.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ===== What's included ===== -->
+  <section class="section section--alt" id="included">
+    <div class="container">
+      <span class="eyebrow center"><i class="dot"></i>EVERY BOOKING INCLUDES</span>
+      <h2 class="section__title center">Turn-key, attendant-run, stress-free</h2>
+      <ul class="included">
+        <li class="reveal"><span>◆</span>On-site attendant(s) start to finish</li>
+        <li class="reveal"><span>◆</span>Premium HD / DSLR capture</li>
+        <li class="reveal"><span>◆</span>Custom branded video overlay</li>
+        <li class="reveal"><span>◆</span>Unlimited sessions during your event</li>
+        <li class="reveal"><span>◆</span>Instant sharing — QR, text &amp; email</li>
+        <li class="reveal"><span>◆</span>Curated props for great reels</li>
+        <li class="reveal"><span>◆</span>Online gallery of every clip</li>
+        <li class="reveal"><span>◆</span>Delivery, setup &amp; teardown</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== Reels gallery ===== -->
+  <section class="section" id="reels">
+    <div class="container">
+      <span class="eyebrow center"><i class="dot"></i>BOOTHS IN ACTION</span>
+      <h2 class="section__title center">See the reels</h2>
+      <p class="lede center">A taste of what your guests walk away with. Vertical, glossy, and ready to post.</p>
+      <!-- [CONFIRM] Placeholder reel tiles — swap each for a real 9:16 reel (video/poster) or an embedded Instagram feed -->
+      <div class="reels">
+        <div class="reel reveal"><span class="reel__play">▶</span><span class="reel__tag">REEL 01</span></div>
+        <div class="reel reveal delay-1"><span class="reel__play">▶</span><span class="reel__tag">REEL 02</span></div>
+        <div class="reel reveal delay-2"><span class="reel__play">▶</span><span class="reel__tag">REEL 03</span></div>
+        <div class="reel reveal delay-3"><span class="reel__play">▶</span><span class="reel__tag">REEL 04</span></div>
+      </div>
+      <p class="reels__follow">Fresh reels every week —
+        <a href="https://instagram.com/kilpenphotography" rel="noopener">@kilpenphotography ↗</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== Event types ===== -->
+  <section class="section section--alt" id="events">
+    <div class="container">
+      <span class="eyebrow center"><i class="dot"></i>PERFECT FOR</span>
+      <h2 class="section__title center">Every kind of celebration</h2>
+      <div class="events">
+        <article class="event reveal"><h3>Weddings</h3><p>Give guests a keepsake they&rsquo;ll post before the night&rsquo;s over.</p></article>
+        <article class="event reveal delay-1"><h3>Corporate &amp; Activations</h3><p>Branded content and buzz — every guest becomes an ambassador.</p></article>
+        <article class="event reveal delay-2"><h3>Parties &amp; Celebrations</h3><p>Birthdays, graduations, showers — the booth is the main event.</p></article>
+        <article class="event reveal delay-3"><h3>Nightlife &amp; Venues</h3><p>Turn your floor into a spectacle that pulls a crowd and a line.</p></article>
+        <article class="event reveal"><h3>Mitzvahs &amp; Quinces</h3><p>High-energy reels the guest of honor and friends will replay for years.</p></article>
+        <article class="event reveal delay-1"><h3>Grand Openings</h3><p>Launch with shareable moments that put your brand in every feed.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Corporate / brand-activation band ===== -->
+  <section class="cta-band">
+    <div class="container narrow center">
+      <span class="eyebrow center"><i class="dot"></i>FOR BRANDS &amp; MARKETERS</span>
+      <h2 class="section__title">A 360° booth is a marketing engine.</h2>
+      <p class="lede">Custom-branded overlays on every clip. Guest-generated content that spreads on its own. Optional email &amp; phone capture at the share step, plus a social-analytics report — so your activation keeps working long after the last guest leaves.</p>
+      <a href="#quote" class="btn btn--primary">Plan a brand activation</a>
+    </div>
+  </section>
+
+  <!-- ===== Tips ===== -->
+  <section class="section" id="tips">
+    <div class="container">
+      <span class="eyebrow center"><i class="dot"></i>PRO TIPS</span>
+      <h2 class="section__title center">How to get an amazing reel</h2>
+      <div class="tips">
+        <div class="tip reveal"><span class="tip__n">01</span><p><strong>Move slow.</strong> A hair flip or smooth spin beats a frantic dance — slow motion loves intention.</p></div>
+        <div class="tip reveal delay-1"><span class="tip__n">02</span><p><strong>Grab props first.</strong> Confetti, sparklers, sunglasses, signs — pick them up before you step on.</p></div>
+        <div class="tip reveal delay-2"><span class="tip__n">03</span><p><strong>Jump together.</strong> Count it out — mid-air moments look incredible slowed down.</p></div>
+        <div class="tip reveal delay-3"><span class="tip__n">04</span><p><strong>Play to the lens.</strong> Hold eye contact and hit your pose as the camera comes around.</p></div>
+        <div class="tip reveal"><span class="tip__n">05</span><p><strong>Sync to the beat.</strong> Time your move to the drop and lean on trending audio when you post.</p></div>
+        <div class="tip reveal delay-1"><span class="tip__n">06</span><p><strong>Show the &lsquo;fit.</strong> Themed outfits and bold colors pop — this is your close-up.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Add-ons ===== -->
+  <section class="section section--alt" id="addons">
+    <div class="container">
+      <span class="eyebrow center"><i class="dot"></i>TAKE IT FURTHER</span>
+      <h2 class="section__title center">Add-ons &amp; upgrades</h2>
+      <div class="chips">
+        <span class="chip reveal">Custom backdrop / enclosure</span>
+        <span class="chip reveal">LED platform &amp; lighting</span>
+        <span class="chip reveal">Fog / haze + laser</span>
+        <span class="chip reveal">Confetti, sparklers &amp; props</span>
+        <span class="chip reveal">GIF · boomerang · speed-ramp</span>
+        <span class="chip reveal">Green screen</span>
+        <span class="chip reveal">Live video screen to the room</span>
+        <span class="chip reveal">Branded sharing kiosk</span>
+        <span class="chip reveal">Data &amp; social analytics</span>
+        <span class="chip reveal">Additional hours</span>
+        <span class="chip reveal">Rush same-day gallery</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Social proof ===== -->
+  <section class="section" id="loved">
+    <div class="container">
+      <div class="stats">
+        <div class="stat reveal"><span class="stat__v" data-count="200">0</span><span class="stat__plus">+</span><span class="stat__l">events captured</span></div>
+        <div class="stat reveal delay-1"><span class="stat__v" data-count="15000">0</span><span class="stat__plus">+</span><span class="stat__l">reels shared</span></div>
+        <div class="stat reveal delay-2"><span class="stat__v">5.0</span><span class="stat__l">average rating</span></div>
+      </div>
+      <!-- [CONFIRM] Placeholder testimonials — replace with real client quotes -->
+      <div class="quotes">
+        <blockquote class="reveal"><p>“The booth was the hit of the whole reception — our guests were still posting the next morning.”</p><cite>— Placeholder, Wedding</cite></blockquote>
+        <blockquote class="reveal delay-1"><p>“Branded reels from every attendee. Our activation trended locally for a week.”</p><cite>— Placeholder, Brand Activation</cite></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="section section--alt" id="faq">
+    <div class="container narrow">
+      <span class="eyebrow center"><i class="dot"></i>GOOD TO KNOW</span>
+      <h2 class="section__title center">Frequently asked</h2>
+      <div class="faq">
+        <details class="reveal"><summary>How much space does the booth need?</summary><p>About a 10×10&nbsp;ft area with a standard power outlet nearby. We handle the rest. <span class="mono">[confirm]</span></p></details>
+        <details class="reveal"><summary>How many guests can go at once?</summary><p>Up to five comfortably on the platform, depending on the setup. <span class="mono">[confirm]</span></p></details>
+        <details class="reveal"><summary>Indoor or outdoor?</summary><p>Both — outdoor setups just need level ground and weather permitting.</p></details>
+        <details class="reveal"><summary>When do we get the reels?</summary><p>Instantly at the event via QR, text, or email, plus a full online gallery within 48&nbsp;hours. <span class="mono">[confirm]</span></p></details>
+        <details class="reveal"><summary>Do you travel between islands?</summary><p>Yes — we serve events across the Hawaiian Islands; travel is quoted per event. <span class="mono">[confirm]</span></p></details>
+        <details class="reveal"><summary>How do we lock in our date?</summary><p>Send a quote request below and we&rsquo;ll confirm availability and hold your date. We reply within 24&nbsp;hours.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Quote form ===== -->
+  <section class="quote" id="quote">
+    <div class="container quote__grid">
+      <div class="quote__copy">
+        <span class="eyebrow"><i class="dot"></i>CHECK YOUR DATE</span>
+        <h2 class="section__title">Let&rsquo;s make your event unforgettable.</h2>
+        <p>Tell us about your event and we&rsquo;ll confirm availability, walk you through options, and get you a quote. No pressure — just answers.</p>
+        <p class="quote__promise"><span class="sunrise-dot" aria-hidden="true"></span>We reply within 24 hours.</p>
+      </div>
+      <!-- [CONFIG] Wire action to a real endpoint (Apps Script / Formspree / Worker) delivering to photo@kilpen.com -->
+      <form class="quote__form" id="quoteForm" novalidate>
+        <div class="row2">
+          <label><span>Name</span><input type="text" name="name" placeholder="Your name" required></label>
+          <label><span>Phone</span><input type="tel" name="phone" placeholder="(808) …"></label>
+        </div>
+        <label><span>Email</span><input type="email" name="email" placeholder="you@email.com" required></label>
+        <div class="row2">
+          <label><span>Event date</span><input type="date" name="date"></label>
+          <label><span>Event type</span>
+            <select name="type">
+              <option value="" disabled selected>Choose one</option>
+              <option>Wedding</option><option>Corporate / brand activation</option>
+              <option>Party / celebration</option><option>Nightlife / venue</option>
+              <option>Mitzvah / quinceañera</option><option>Other</option>
+            </select>
+          </label>
+        </div>
+        <div class="row2">
+          <label><span>Venue / location</span><input type="text" name="location" placeholder="City or venue"></label>
+          <label><span>Guest count</span><input type="text" name="guests" placeholder="Approx."></label>
+        </div>
+        <label><span>Anything else?</span><textarea name="message" rows="4" placeholder="Tell us about your event…"></textarea></label>
+        <button type="submit" class="btn btn--primary btn--full">Request my date</button>
+        <p class="quote__ok" id="quoteOk" hidden>Thanks! Your request is in — we&rsquo;ll be in touch within 24 hours. <span class="mono">(demo — form endpoint not yet connected)</span></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="foot">
+    <div class="container foot__inner">
+      <a href="../" class="foot__brand"><img src="../assets/img/kilpen-wordmark-dark.png" alt="KilPen Photography" height="34"></a>
+      <nav class="foot__links" aria-label="Footer">
+        <a href="#what">What it is</a><a href="#reels">Reels</a><a href="#events">Events</a>
+        <a href="#quote">Check my date</a><a href="../drone/">Drone aerial</a>
+      </nav>
+      <div class="foot__social">
+        <a href="https://instagram.com/kilpenphotography" rel="noopener">Instagram ↗</a>
+      </div>
+    </div>
+    <div class="container foot__legal">
+      <span>FAA PART 107 · INSURED · HAWAII</span>
+      <span>© <span id="yr"></span> KilPen Photography · a <a href="https://kilpen.com" rel="noopener">KilPen</a> company</span>
+    </div>
+  </footer>
+
+  <script src="../assets/js/booth.js"></script>
 </body>
 </html>
