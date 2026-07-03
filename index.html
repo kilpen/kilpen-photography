@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KilPen Photography — 360° Photo Booth &amp; Drone Aerial | Hawaii</title>
+  <meta name="description" content="KilPen Photography — tech-forward 360° photo booth experiences and cinematic drone aerial photography across the Hawaiian Islands. Choose your service.">
+  <meta name="theme-color" content="#121212">
+  <meta property="og:title" content="KilPen Photography — Every angle. Above and around.">
+  <meta property="og:description" content="360° photo booth reels and cinematic aerial drone imagery, Hawaii.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/gateway.css">
+</head>
+<body>
+  <main class="gateway" id="gateway">
+    <canvas class="fx" id="fx" aria-hidden="true"></canvas>
+
+    <header class="gw-top">
+      <span class="wordmark">KIL<span class="wordmark__pen">PEN</span></span>
+      <span class="wordmark__sub">PHOTOGRAPHY</span>
+    </header>
+
+    <div class="paths" id="paths">
+
+      <!-- ===== 360 PHOTO BOOTH ===== -->
+      <a class="panel panel--360" id="panel360" href="360/">
+        <div class="corner corner--tl"></div>
+        <div class="corner corner--tr"></div>
+        <div class="corner corner--bl"></div>
+        <div class="corner corner--br"></div>
+
+        <div class="panel__inner">
+          <span class="panel__eyebrow"><i class="dot"></i>SERVICE 01 — IMMERSIVE</span>
+          <h1 class="panel__title reveal">360°<br>Photo Booth</h1>
+          <p class="panel__desc reveal">Cinematic slow-motion reels for weddings, parties &amp; brand activations. Your guests, from every angle.</p>
+          <span class="magnetic btn btn--360" data-mag>
+            <span class="btn__label">Enter Photo Booth</span>
+            <span class="btn__arrow">→</span>
+          </span>
+        </div>
+
+        <div class="hud hud--360" aria-hidden="true">
+          <span class="hud__rec"><i></i>REC</span>
+          <span id="tele360">240 FPS · SLO-MO · SPIN 33 RPM</span>
+        </div>
+      </a>
+
+      <!-- ===== DRONE AERIAL ===== -->
+      <a class="panel panel--drone" id="panelDrone" href="drone/">
+        <div class="corner corner--tl"></div>
+        <div class="corner corner--tr"></div>
+        <div class="corner corner--bl"></div>
+        <div class="corner corner--br"></div>
+
+        <div class="panel__inner">
+          <span class="panel__eyebrow"><i class="dot dot--sky"></i>SERVICE 02 — AERIAL</span>
+          <h1 class="panel__title reveal">Drone<br>Aerial</h1>
+          <p class="panel__desc reveal">Stunning aerial photography &amp; videography across the Hawaiian Islands. The world, from above.</p>
+          <span class="magnetic btn btn--drone" data-mag>
+            <span class="btn__label">Enter Aerial</span>
+            <span class="btn__arrow">→</span>
+          </span>
+        </div>
+
+        <div class="hud hud--drone" aria-hidden="true">
+          <span class="hud__rec hud__rec--sky"><i></i>LIVE</span>
+          <span id="teleDrone">ALT 412 FT · 21.31°N 157.86°W · 4K60</span>
+        </div>
+      </a>
+
+    </div>
+
+    <div class="seam" id="seam" aria-hidden="true"></div>
+
+    <footer class="gw-foot">
+      <span class="gw-hint">Select a service</span>
+      <span class="gw-badges">FAA PART 107 · INSURED · HAWAII</span>
+    </footer>
+  </main>
+
+  <script src="assets/js/gateway.js"></script>
+</body>
+</html>
