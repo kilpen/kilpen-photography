@@ -11,15 +11,15 @@ permissions:
   pages: write
   id-token: write
 
+# Only one deploy at a time; cancel a superseded run so overlapping runs
+# don't each upload a "github-pages" artifact and make deploy-pages abort
+# with "Multiple artifacts named github-pages were unexpectedly found".
 concurrency:
   group: "pages"
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -30,6 +30,14 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: .
+
+  deploy:
+    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
