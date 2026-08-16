@@ -43,6 +43,7 @@
 
   <!-- ===== Hero ===== -->
   <section class="hero">
+    <canvas class="hero__fx" id="orbitFx" aria-hidden="true"></canvas>
     <div class="hero__glow" aria-hidden="true"></div>
     <div class="hero__grid">
       <div class="hero__copy">
@@ -72,7 +73,7 @@
             </div>
             <div class="phone__hud">
               <span class="phone__rec"><i></i>REC</span>
-              <span>360° · SLO-MO · 240 FPS</span>
+              <span id="teleBooth">360° · SLO-MO · 240 FPS</span>
             </div>
           </div>
         </div>
@@ -326,5 +327,6 @@
   </footer>
 
   <script src="assets/js/booth.js"></script>
+  <script src="assets/js/orbit.js"></script>
 </body>
 </html>

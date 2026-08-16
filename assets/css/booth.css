@@ -92,8 +92,9 @@ img { max-width:100%; display:block; }
 
 /* ---------- Hero ---------- */
 .hero { position:relative; padding:8.5rem 0 4.5rem; overflow:hidden; }
+.hero__fx { position:absolute; inset:0; z-index:0; pointer-events:none; }
 .hero__glow { position:absolute; inset:0; background:radial-gradient(45% 55% at 70% 40%, rgba(226,84,68,.16), transparent 70%); pointer-events:none; }
-.hero__grid { position:relative; width:min(1180px,92vw); margin-inline:auto; display:grid; grid-template-columns:1.1fr .9fr; gap:3rem; align-items:center; }
+.hero__grid { position:relative; z-index:1; width:min(1180px,92vw); margin-inline:auto; display:grid; grid-template-columns:1.1fr .9fr; gap:3rem; align-items:center; }
 .hero__title { font-family:var(--font-display); font-weight:800; font-size:clamp(2.6rem,6vw,4.6rem); line-height:1.0; letter-spacing:-.025em; color:#fff; margin-bottom:1.4rem; }
 .hero__sub { font-size:clamp(1.02rem,1.5vw,1.2rem); color:var(--ink-400); max-width:34rem; margin-bottom:2rem; }
 .hero__cta { display:flex; gap:1rem; flex-wrap:wrap; }
