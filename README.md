@@ -1,25 +1,21 @@
 # KilPen Photography — kilpen.photography
 
-Static, tech-forward site for KilPen's photography vertical: **360° photo booth** (event)
-and **drone aerial** photography. Hand-built (no framework), deployed to GitHub Pages.
+Static, tech-forward site for KilPen's photography vertical: the **360° photo booth**
+(events across Hawaii). Hand-built (no framework), deployed to GitHub Pages.
 
-## Status
-
-- ✅ **Gateway landing page** (`index.html`) — the split "choose your service" experience
-  with a live Canvas motion engine (orbit reticle for 360, flight-path + perspective grid
-  + HUD telemetry for drone), hover-expand, magnetic CTAs, mobile stacking, and a
-  `prefers-reduced-motion` static fallback. **Prototype complete.**
-- 🚧 `/360/` and `/drone/` — placeholder stubs; full pages to be built per the spec.
+> **2026-08:** scaled back from the original dual-service layout (360 + drone aerial)
+> to a single-purpose 360° photo booth site. The gateway landing and `/drone/` page
+> were retired; `/360/` and `/drone/` now redirect to the root.
 
 ## Structure
 
 ```
-index.html              Gateway landing (centerpiece)
-assets/css/gateway.css   Gateway styling — brand tokens at top
-assets/js/gateway.js     Canvas motion engine + interactions (zero dependencies)
-360/index.html           360° photo booth (stub → build per spec §5)
-drone/index.html         Drone aerial (stub → build per spec §6)
-docs/website-spec.md     Full specification (v2)
+index.html               The 360° photo booth page (site root)
+assets/css/booth.css     Page styling — brand tokens at top
+assets/js/booth.js       Interactions (reveal-on-scroll, counters, nav) — zero dependencies
+360/index.html           Redirect stub → /   (preserves previously shared links)
+drone/index.html         Redirect stub → /   (drone vertical retired)
+docs/website-spec.md     Full specification (local only, not deployed)
 CNAME                    kilpen.photography
 .github/workflows/       GitHub Pages deploy (push to main)
 ```
@@ -31,13 +27,12 @@ python3 -m http.server 8749
 # open http://localhost:8749
 ```
 
-Brand tokens (from kilpen.com): charcoal `#121212`, crimson `#a32424`, flame `#e25444`,
-drone-side sky-cyan `#38bdf8`. Fonts: Sora + Inter + Space Mono (telemetry).
+## Notes
 
-## Design notes
-
-- The motion engine is one hand-written Canvas 2D loop with two scene configs. It pauses
-  when the tab is hidden, scales particle counts to screen size/DPR, and renders a single
-  static frame under reduced-motion.
-- Text legibility never depends on animation state (entrance animates transform only).
-- No third-party JS/CDN for motion — GSAP is an option later but not required.
+- Brand tokens (from kilpen.com): charcoal `#121212`, crimson `#a32424`, flame `#e25444`.
+  Fonts: Sora + Inter + Space Mono (telemetry accents).
+- Instagram: [@kilpen_photography](https://www.instagram.com/kilpen_photography/) — note
+  the underscore in the handle.
+- The quote form is not yet wired to an endpoint (`[CONFIG]` comment in `index.html`);
+  reel tiles, stats and testimonials are placeholders marked `[CONFIRM]`.
+- Text legibility never depends on animation state; reduced-motion is respected.
