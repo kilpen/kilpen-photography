@@ -108,11 +108,12 @@ img { max-width:100%; display:block; }
   box-shadow:0 40px 90px -30px rgba(226,84,68,.4), inset 0 0 0 6px #000; overflow:hidden;
 }
 .phone__notch { position:absolute; top:10px; left:50%; transform:translateX(-50%); width:38%; height:16px; background:#000; border-radius:0 0 12px 12px; z-index:3; }
-.phone__screen { position:absolute; inset:6px; border-radius:28px; overflow:hidden; background:radial-gradient(120% 90% at 50% 30%, #2a1414, #0c0808 70%); }
-.reelfx { position:absolute; inset:0; display:grid; place-items:center; }
+.phone__screen { position:absolute; inset:6px; border-radius:28px; overflow:hidden;
+  background:url(../img/kilpen-penguin-camera.webp) center calc(100% - 36px) / 92% auto no-repeat, radial-gradient(120% 90% at 50% 30%, #2a1414, #0c0808 70%); }
+.reelfx { position:absolute; inset:0; display:grid; place-items:center; z-index:0; }
 .reelfx__ring { width:62%; aspect-ratio:1; border-radius:50%; border:1px dashed rgba(226,84,68,.5); box-shadow:var(--glow-red); animation:spin 6s linear infinite; }
 .reelfx__ring::after { content:""; position:absolute; inset:22%; border-radius:50%; border:1px solid rgba(226,84,68,.3); }
-.reelfx__subject { position:absolute; width:34%; aspect-ratio:1; border-radius:50%; background:radial-gradient(circle at 40% 35%, #fbd77e, var(--flame-500) 55%, var(--red-700)); box-shadow:0 0 40px rgba(226,84,68,.6); filter:blur(1px); }
+.reelfx__subject { display:none; position:absolute; width:34%; aspect-ratio:1; border-radius:50%; background:radial-gradient(circle at 40% 35%, #fbd77e, var(--flame-500) 55%, var(--red-700)); box-shadow:0 0 40px rgba(226,84,68,.6); filter:blur(1px); }
 .reelfx__c { position:absolute; width:7px; height:7px; border-radius:2px; background:var(--flame-500); box-shadow:var(--glow-red); animation:float 3.4s ease-in-out infinite; }
 .reelfx__c1{ top:22%; left:26%; } .reelfx__c2{ top:34%; right:22%; animation-delay:.5s; }
 .reelfx__c3{ bottom:28%; left:30%; animation-delay:1s; background:#fbd77e; } .reelfx__c4{ bottom:22%; right:28%; animation-delay:1.5s; }
