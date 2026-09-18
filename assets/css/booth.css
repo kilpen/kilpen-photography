@@ -166,6 +166,9 @@ img { max-width:100%; display:block; }
 .reel:hover { transform:translateY(-5px) scale(1.02); box-shadow:0 22px 46px -20px rgba(163,36,36,.6); }
 .reel__play { position:relative; width:48px; height:48px; border-radius:50%; display:grid; place-items:center; background:rgba(0,0,0,.45); border:1px solid rgba(226,84,68,.6); color:#fff; font-size:.9rem; padding-left:3px; }
 .reel__tag { position:absolute; bottom:10px; left:10px; font-family:var(--font-mono); font-size:.6rem; letter-spacing:.14em; color:rgba(255,255,255,.75); z-index:2; }
+.reel--video { cursor:default; }
+.reel--video::before { display:none; }
+.reel__video { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; }
 .reels__follow { text-align:center; margin-top:1.8rem; color:var(--ink-500); }
 .reels__follow a { color:var(--flame-500); text-decoration:none; font-weight:600; }
 .reels__follow a:hover { color:#fff; }
