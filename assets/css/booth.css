@@ -206,12 +206,6 @@ img { max-width:100%; display:block; }
 .price__v { font-family:var(--font-display); font-weight:800; font-size:clamp(2.4rem,5vw,3.6rem); color:#fff; line-height:1; }
 .price__l { font-size:.92rem; color:var(--ink-400); }
 
-/* quotes */
-.quotes { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:1.4rem; }
-.quotes blockquote { background:rgba(255,255,255,.03); border:1px solid var(--line); border-left:3px solid var(--flame-500); border-radius:12px; padding:1.8rem; }
-.quotes p { font-family:var(--font-display); font-style:italic; font-weight:400; font-size:1.1rem; color:#eee; margin-bottom:1rem; }
-.quotes cite { font-style:normal; font-family:var(--font-mono); font-size:.72rem; letter-spacing:.1em; color:var(--flame-500); }
-
 /* faq */
 .faq { margin-top:2.4rem; }
 .faq details { border-bottom:1px solid var(--line); }
