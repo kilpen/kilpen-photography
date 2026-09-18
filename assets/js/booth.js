@@ -63,15 +63,33 @@ if (reduce || !('IntersectionObserver' in window)) {
   counters.forEach((el) => cio.observe(el));
 }
 
-// Quote form — demo handler (no endpoint wired yet)
+// Quote form → n8n webhook (workflow "kilpen.photography Quote Form → info@kilpen.photography")
+const QUOTE_ENDPOINT = 'https://n8n.kilpen.com/webhook/photography-quote';
 const form = document.getElementById('quoteForm');
 const ok = document.getElementById('quoteOk');
-form.addEventListener('submit', (e) => {
+const err = document.getElementById('quoteErr');
+form.addEventListener('submit', async (e) => {
   e.preventDefault();
   if (!form.checkValidity()) { form.reportValidity(); return; }
-  ok.hidden = false;
-  form.querySelector('button[type=submit]').textContent = 'Request sent ✓';
-  form.querySelector('button[type=submit]').disabled = true;
+  const btn = form.querySelector('button[type=submit]');
+  const label = btn.textContent;
+  btn.disabled = true; btn.textContent = 'Sending…'; err.hidden = true;
+  try {
+    const res = await fetch(QUOTE_ENDPOINT, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(Object.fromEntries(new FormData(form))),
+    });
+    const data = await res.json().catch(() => ({}));
+    if (!res.ok || !data.ok) throw new Error(data.error || 'Request failed');
+    ok.hidden = false;
+    btn.textContent = 'Request sent ✓';
+  } catch (ex) {
+    err.textContent = ex.message && ex.message !== 'Failed to fetch' ? ex.message
+      : "We couldn't send your request just now. Please email info@kilpen.photography and we'll get right back to you.";
+    err.hidden = false;
+    btn.disabled = false; btn.textContent = label;
+  }
 });
 
 // Year

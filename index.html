@@ -17,7 +17,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/booth.css?v=20260918">
+  <link rel="stylesheet" href="assets/css/booth.css?v=20260918b">
 </head>
 <body>
 
@@ -263,7 +263,7 @@
         <p>Tell us about your event and we&rsquo;ll confirm availability, walk you through options, and get you a quote. No pressure — just answers.</p>
         <p class="quote__promise"><span class="sunrise-dot" aria-hidden="true"></span>We reply within 24 hours.</p>
       </div>
-      <!-- [CONFIG] Wire action to a real endpoint (Apps Script / Formspree / Worker) delivering to photo@kilpen.com -->
+      <!-- Submits via fetch (booth.js) to the n8n webhook /webhook/photography-quote → email to info@kilpen.photography. "website" is a honeypot: humans never see it, bots fill it. -->
       <form class="quote__form" id="quoteForm" novalidate>
         <div class="row2">
           <label><span>Name</span><input type="text" name="name" placeholder="Your name" required></label>
@@ -286,8 +286,10 @@
           <label><span>Guest count</span><input type="text" name="guests" placeholder="Approx."></label>
         </div>
         <label><span>Anything else?</span><textarea name="message" rows="4" placeholder="Tell us about your event…"></textarea></label>
+        <label class="hp" aria-hidden="true"><span>Website</span><input type="text" name="website" tabindex="-1" autocomplete="off"></label>
         <button type="submit" class="btn btn--primary btn--full">Request my date</button>
-        <p class="quote__ok" id="quoteOk" hidden>Thanks! Your request is in — we&rsquo;ll be in touch within 24 hours. <span class="mono">(demo — form endpoint not yet connected)</span></p>
+        <p class="quote__ok" id="quoteOk" hidden>Thanks! Your request is in — we&rsquo;ll be in touch within 24 hours.</p>
+        <p class="quote__err" id="quoteErr" hidden></p>
       </form>
     </div>
   </section>
@@ -310,7 +312,7 @@
     </div>
   </footer>
 
-  <script src="assets/js/booth.js?v=20260815"></script>
+  <script src="assets/js/booth.js?v=20260918"></script>
   <script src="assets/js/orbit.js?v=20260815"></script>
 </body>
 </html>
