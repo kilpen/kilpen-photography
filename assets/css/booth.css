@@ -231,6 +231,9 @@ img { max-width:100%; display:block; }
 .quote__form input::placeholder, .quote__form textarea::placeholder { color:rgba(255,255,255,.35); }
 .quote__form input:focus, .quote__form select:focus, .quote__form textarea:focus { outline:none; border-color:var(--flame-500); box-shadow:0 0 0 3px rgba(226,84,68,.2); }
 .quote__ok { color:#8fe3a0; font-size:.92rem; }
+.quote__err { color:#ff8a80; font-size:.92rem; }
+.quote__err a { color:inherit; text-decoration:underline; }
+.quote__form .hp { position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden; }
 
 /* footer */
 .foot { border-top:1px solid var(--line); padding:2.8rem 0 1.8rem; background:#0e0b0b; }
