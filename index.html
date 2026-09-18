@@ -163,9 +163,13 @@
       <span class="eyebrow center"><i class="dot"></i>BOOTHS IN ACTION</span>
       <h2 class="section__title center">See the reels</h2>
       <p class="lede center">A taste of what your guests walk away with. Vertical, glossy, and ready to post.</p>
-      <!-- [CONFIRM] Placeholder reel tiles — swap each for a real 9:16 reel (video/poster) or an embedded Instagram feed -->
+      <!-- REEL 01 is a real sample (assets/video/reel-01.mp4, 720x1290 silent H.264 + poster). [CONFIRM] REEL 02–04 are still placeholder tiles — swap each for a real 9:16 reel (video/poster) or an embedded Instagram feed -->
       <div class="reels">
-        <div class="reel reveal"><span class="reel__play">▶</span><span class="reel__tag">REEL 01</span></div>
+        <div class="reel reel--video reveal">
+          <video class="reel__video" src="assets/video/reel-01.mp4" poster="assets/img/reel-01-poster.jpg"
+                 muted loop playsinline autoplay preload="metadata" aria-label="Sample 360 booth reel"></video>
+          <span class="reel__tag">REEL 01</span>
+        </div>
         <div class="reel reveal delay-1"><span class="reel__play">▶</span><span class="reel__tag">REEL 02</span></div>
         <div class="reel reveal delay-2"><span class="reel__play">▶</span><span class="reel__tag">REEL 03</span></div>
         <div class="reel reveal delay-3"><span class="reel__play">▶</span><span class="reel__tag">REEL 04</span></div>
