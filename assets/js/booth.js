@@ -38,31 +38,6 @@ if (reduce || !('IntersectionObserver' in window)) {
   reveals.forEach((el) => io.observe(el));
 }
 
-// Count-up stats
-const counters = document.querySelectorAll('.stat__v[data-count]');
-const fmt = (n) => n.toLocaleString('en-US');
-const countUp = (el) => {
-  const target = +el.dataset.count;
-  const dur = 1500, start = performance.now();
-  const tick = (now) => {
-    const p = Math.min((now - start) / dur, 1);
-    el.textContent = fmt(Math.round(target * (1 - Math.pow(1 - p, 3))));
-    if (p < 1) requestAnimationFrame(tick);
-  };
-  requestAnimationFrame(tick);
-};
-if (reduce || !('IntersectionObserver' in window)) {
-  counters.forEach((el) => (el.textContent = fmt(+el.dataset.count)));
-} else {
-  const cio = new IntersectionObserver(
-    (entries) => entries.forEach((e) => {
-      if (e.isIntersecting) { countUp(e.target); cio.unobserve(e.target); }
-    }),
-    { threshold: 0.6 }
-  );
-  counters.forEach((el) => cio.observe(el));
-}
-
 // Quote form → n8n webhook (workflow "kilpen.photography Quote Form → info@kilpen.photography")
 const QUOTE_ENDPOINT = 'https://n8n.kilpen.com/webhook/photography-quote';
 const form = document.getElementById('quoteForm');
