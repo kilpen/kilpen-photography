@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>360° Photo Booth — KilPen Photography | Hawaii</title>
-  <meta name="description" content="KilPen Photography's 360° photo booth captures cinematic slow-motion reels your guests share instantly. Military events, dining outs, parties & brand events across Hawaii. Check your date.">
-  <meta name="theme-color" content="#121212">
+  <title>360° Photo Booth — KilPen Photography | O‘ahu</title>
+  <meta name="description" content="A 360° photo booth that turns your guests into the show. Slow-motion reels, shared to their phones in seconds. Military balls, dining outs, parties and brand events on O‘ahu. Check your date.">
+  <meta name="theme-color" content="#FFF9F2">
   <meta property="og:title" content="360° Photo Booth — KilPen Photography">
-  <meta property="og:description" content="Cinematic slow-motion 360° reels for military events, dining outs, parties & brand events across Hawaii.">
+  <meta property="og:description" content="Slow-motion 360° reels your guests share in seconds. O‘ahu events: military balls, dining outs, parties, brand launches.">
   <meta property="og:image" content="https://kilpen.photography/assets/img/kilpen-penguin.png">
   <meta property="og:url" content="https://kilpen.photography/">
   <link rel="canonical" href="https://kilpen.photography/">
@@ -16,8 +16,8 @@
   <link rel="apple-touch-icon" href="assets/img/favicon-180.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/booth.css?v=20260918b">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/booth.css?v=20260930">
 </head>
 <body>
 
@@ -25,18 +25,18 @@
   <header class="nav" id="nav">
     <div class="nav__inner">
       <a class="nav__brand" href="/" aria-label="KilPen Photography home">
-        <img src="assets/img/kilpen-wordmark-dark.png" alt="KilPen Photography" height="30">
+        <img src="assets/img/kilpen-wordmark-light.png" alt="KilPen Photography" width="150" height="46">
       </a>
       <nav class="nav__links" id="navLinks" aria-label="Primary">
         <a href="#what">What it is</a>
-        <a href="#how">How it works</a>
         <a href="#reels">Reels</a>
+        <a href="#how">How it works</a>
         <a href="#events">Events</a>
         <a href="#pricing">Pricing</a>
         <a href="#faq">FAQ</a>
       </nav>
       <div class="nav__actions">
-        <a href="#quote" class="btn btn--primary btn--sm">Check My Date</a>
+        <a href="#quote" class="btn btn--primary btn--sm">Check my date</a>
       </div>
       <button class="nav__toggle" id="navToggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
@@ -44,212 +44,190 @@
 
   <!-- ===== Hero ===== -->
   <section class="hero">
-    <canvas class="hero__fx" id="orbitFx" aria-hidden="true" style="position:absolute;inset:0;z-index:0;pointer-events:none"></canvas>
-    <div class="hero__glow" aria-hidden="true"></div>
     <div class="hero__grid">
       <div class="hero__copy">
-        <span class="eyebrow"><i class="dot"></i>360° PHOTO BOOTH · HAWAII</span>
-        <h1 class="hero__title">Your guests,<br><span class="grad">in cinematic 360°.</span></h1>
-        <p class="hero__sub">Step onto the platform, strike a pose, and our motorized booth sweeps around you — capturing slow-motion video that looks like a scene from a music video. Shared to their phones in seconds.</p>
+        <h1 class="hero__title">Your guests become<br>the show.</h1>
+        <p class="hero__sub">Step onto the platform, do your thing, and our camera sweeps all the way around you in slow motion. The reel lands on your phone before you've found your drink.</p>
         <div class="hero__cta">
-          <a href="#quote" class="btn btn--primary">Check My Date</a>
-          <a href="#reels" class="btn btn--ghost">Watch reels</a>
+          <a href="#quote" class="btn btn--primary btn--lg">Check my date</a>
+          <a href="#reels" class="btn btn--outline btn--lg">Watch the reels</a>
         </div>
-        <p class="hero__trust">Military events · Dining outs · Parties · Corporate &amp; brand events · Nightlife</p>
+        <ul class="hero__facts" aria-label="Quick facts">
+          <li><strong>O‘ahu</strong> events</li>
+          <li><strong>120 fps</strong> slow motion</li>
+          <li><strong>Seconds</strong> to your phone</li>
+        </ul>
       </div>
 
-      <!-- Placeholder reel: a phone-framed 360 reel mockup (swap for a real vertical reel loop) -->
-      <div class="hero__reel" aria-hidden="true">
+      <!-- The booth, literally: a real reel inside a phone, with the arm's sweep as a ring of text -->
+      <div class="hero__stage" aria-hidden="true">
+        <div class="ring">
+          <svg viewBox="0 0 400 400">
+            <defs><path id="ringPath" d="M200,200 m-172,0 a172,172 0 1,1 344,0 a172,172 0 1,1 -344,0"/></defs>
+            <text class="ring__text"><textPath href="#ringPath">spin · pose · slow-mo · share it ·&#160; spin · pose · slow-mo · share it ·&#160;</textPath></text>
+          </svg>
+        </div>
         <div class="phone">
-          <div class="phone__notch"></div>
-          <div class="phone__screen">
-            <div class="reelfx">
-              <div class="reelfx__ring"></div>
-              <div class="reelfx__subject"></div>
-              <span class="reelfx__c reelfx__c1"></span>
-              <span class="reelfx__c reelfx__c2"></span>
-              <span class="reelfx__c reelfx__c3"></span>
-              <span class="reelfx__c reelfx__c4"></span>
-              <span class="reelfx__c reelfx__c5"></span>
-            </div>
-            <div class="phone__hud">
-              <span class="phone__rec"><i></i>REC</span>
-              <span id="teleBooth">360° · SLO-MO · 120 FPS</span>
-            </div>
-          </div>
+          <video class="phone__video" src="assets/video/reel-02.mp4" poster="assets/img/reel-02-poster.jpg"
+                 muted loop playsinline autoplay preload="metadata"></video>
+          <span class="phone__badge">live reel</span>
         </div>
-        <div class="corner corner--tl"></div>
-        <div class="corner corner--br"></div>
+        <img class="hero__penguin" src="assets/img/kilpen-penguin-camera.webp" alt="" width="628" height="640">
+        <span class="confetti confetti--1"></span><span class="confetti confetti--2"></span><span class="confetti confetti--3"></span>
+        <span class="confetti confetti--4"></span><span class="confetti confetti--5"></span><span class="confetti confetti--6"></span>
       </div>
     </div>
   </section>
 
-  <!-- ===== What is a 360 booth ===== -->
+  <!-- ===== What it is ===== -->
   <section class="section" id="what">
-    <div class="container narrow center">
-      <span class="eyebrow center"><i class="dot"></i>THE EXPERIENCE</span>
-      <h2 class="section__title">What is a 360° photo booth?</h2>
-      <p class="lede">Guests stand on a platform while a camera mounted to a rotating arm spins around them, capturing slow-motion video from every angle — head to toe. Unlike a traditional booth that snaps a still photo, a 360° booth creates immersive, share-ready <em>video</em>. Every clip looks like a moment out of a music video, and it&rsquo;s on your guests&rsquo; phones seconds later.</p>
+    <div class="container what">
+      <div class="what__copy">
+        <h2 class="section__title">What is a 360° photo booth?</h2>
+        <p class="lede">Instead of a camera that snaps one photo, ours rides a motorized arm that circles the platform while you move. The result is a slow-motion video from every angle, head to toe, with music and your event's overlay already on it.</p>
+        <p class="lede">Guests don't pose for it. They dance, jump, toss confetti, spin a friend — and then they do it again, because everyone wants another go.</p>
+      </div>
+      <!-- a plan-view diagram of the booth: platform, arm sweep, camera -->
+      <div class="diagram">
+        <svg viewBox="0 0 320 390" role="img" aria-label="Diagram: guests stand on a round platform while a camera on an arm circles around them">
+          <circle cx="160" cy="160" r="150" fill="none" stroke="#17A2B2" stroke-width="3" stroke-dasharray="9 10"/>
+          <circle cx="160" cy="160" r="150" fill="none" stroke="#C8202F" stroke-width="7" stroke-dasharray="235 1000" stroke-linecap="round" class="diagram__sweep"/>
+          <circle cx="160" cy="160" r="74" fill="#FFD9E0" stroke="#1B2230" stroke-width="3"/>
+          <circle cx="160" cy="160" r="60" fill="none" stroke="#1B2230" stroke-width="2" stroke-dasharray="4 6"/>
+          <g fill="#1B2230"><circle cx="145" cy="150" r="9"/><circle cx="176" cy="148" r="9"/><circle cx="160" cy="176" r="9"/></g>
+          <g transform="translate(160 10)">
+            <rect x="-16" y="-9" width="32" height="20" rx="5" fill="#1B2230"/>
+            <circle cx="0" cy="1" r="6" fill="#FFC43D"/><rect x="-6" y="-13" width="12" height="5" rx="2" fill="#1B2230"/>
+          </g>
+          <text x="160" y="348" text-anchor="middle" class="diagram__label">up to three guests on the platform</text>
+          <text x="160" y="372" text-anchor="middle" class="diagram__label">the camera arm circles once per take</text>
+        </svg>
+      </div>
     </div>
   </section>
 
-  <!-- ===== Why / four pillars ===== -->
-  <section class="section section--alt" id="why">
+  <!-- ===== Reels ===== -->
+  <section class="section section--tint" id="reels">
     <div class="container">
-      <span class="eyebrow center"><i class="dot"></i>WHY GUESTS LOVE IT</span>
-      <h2 class="section__title center">Not a photo. A moment.</h2>
-      <div class="pillars">
-        <article class="pillar reveal">
-          <div class="pillar__icon"><svg viewBox="0 0 24 24"><path d="M12 2v4M12 18v4M2 12h4M18 12h4M5 5l3 3M16 16l3 3M19 5l-3 3M8 16l-3 3"/><circle cx="12" cy="12" r="3"/></svg></div>
-          <h3>Interactive</h3>
-          <p>Guests don&rsquo;t just pose — they move, dance, and perform. Everyone wants a turn.</p>
-        </article>
-        <article class="pillar reveal delay-1">
-          <div class="pillar__icon"><svg viewBox="0 0 24 24"><path d="M4 12v7a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-7M16 6l-4-4-4 4M12 2v13"/></svg></div>
-          <h3>Shareable</h3>
-          <p>Vertical, platform-ready clips built for Instagram Reels and TikTok. Instant sharing.</p>
-        </article>
-        <article class="pillar reveal delay-2">
-          <div class="pillar__icon"><svg viewBox="0 0 24 24"><path d="M3 5h18v14H3z"/><path d="M3 9h18M8 5v4"/><circle cx="12" cy="14" r="2.5"/></svg></div>
-          <h3>Cinematic</h3>
-          <p>Crisp, high-frame-rate slow motion from pro capture gear. Clean, glossy, unforgettable.</p>
-        </article>
-        <article class="pillar reveal delay-3">
-          <div class="pillar__icon"><svg viewBox="0 0 24 24"><path d="M12 2l2.4 4.9 5.4.8-3.9 3.8.9 5.4L12 15.4 7.2 17.9l.9-5.4L4.2 8.7l5.4-.8z"/></svg></div>
-          <h3>Customizable</h3>
-          <p>Your logo, colors, hashtag, and theme baked into every clip — branded overlays included.</p>
-        </article>
+      <h2 class="section__title">Straight from the booth</h2>
+      <p class="lede">Real reels from a real event. Vertical, glossy, and on your guests' phones seconds after the arm stops.</p>
+      <!-- Four real sample reels (assets/video/reel-0N.mp4, 720x1290 silent H.264 + poster assets/img/reel-0N-poster.jpg) -->
+      <div class="reels">
+        <figure class="reel">
+          <video class="reel__video" src="assets/video/reel-01.mp4" poster="assets/img/reel-01-poster.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Sample 360 booth reel 1"></video>
+          <figcaption class="sign sign--yellow">G.O.A.T. energy</figcaption>
+        </figure>
+        <figure class="reel reel--up">
+          <video class="reel__video" src="assets/video/reel-02.mp4" poster="assets/img/reel-02-poster.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Sample 360 booth reel 2"></video>
+          <figcaption class="sign sign--pink">Main character</figcaption>
+        </figure>
+        <figure class="reel">
+          <video class="reel__video" src="assets/video/reel-03.mp4" poster="assets/img/reel-03-poster.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Sample 360 booth reel 3"></video>
+          <figcaption class="sign sign--teal">Bring a friend</figcaption>
+        </figure>
+        <figure class="reel reel--up">
+          <video class="reel__video" src="assets/video/reel-04.mp4" poster="assets/img/reel-04-poster.jpg" muted loop playsinline autoplay preload="metadata" aria-label="Sample 360 booth reel 4"></video>
+          <figcaption class="sign sign--yellow">Props encouraged</figcaption>
+        </figure>
       </div>
-      <p class="spec-note center"><span class="mono">SPEC</span> HD / GoPro capture · up to 120&nbsp;fps slow motion · delivered to phones in seconds</p>
+      <p class="reels__follow">More every week on Instagram: <a href="https://www.instagram.com/kilpen_photography/" rel="noopener">@kilpen_photography</a></p>
     </div>
   </section>
 
   <!-- ===== How it works ===== -->
   <section class="section" id="how">
     <div class="container">
-      <span class="eyebrow center"><i class="dot"></i>HOW IT WORKS</span>
-      <h2 class="section__title center">From platform to post in minutes</h2>
+      <h2 class="section__title">Platform to post in about a minute</h2>
       <ol class="steps">
-        <li class="step reveal"><span class="step__n">01</span><h3>Step on</h3><p>Up to three guests hop onto the LED platform after grabbing props.</p></li>
-        <li class="step reveal delay-1"><span class="step__n">02</span><h3>The arm spins</h3><p>Our motorized arm sweeps the camera 360° around you.</p></li>
-        <li class="step reveal delay-2"><span class="step__n">03</span><h3>Slow-mo capture</h3><p>High-frame-rate video freezes every jump, spin, and toss.</p></li>
-        <li class="step reveal delay-3"><span class="step__n">04</span><h3>Branded &amp; edited</h3><p>Music, your overlay, and effects applied on the spot.</p></li>
-        <li class="step reveal delay-4"><span class="step__n">05</span><h3>Shared instantly</h3><p>Guests grab their reel by QR, text, or email — ready to post.</p></li>
+        <li class="step"><span class="step__n">1</span><h3>Grab props, step on</h3><p>Up to three of you on the lit platform. Sunglasses, signs, leis — take what you like.</p></li>
+        <li class="step"><span class="step__n">2</span><h3>The arm goes around</h3><p>Our attendant counts you in and the camera makes its lap.</p></li>
+        <li class="step"><span class="step__n">3</span><h3>Slow-mo does the rest</h3><p>120 frames a second turns a jump or a hair flip into a movie moment.</p></li>
+        <li class="step"><span class="step__n">4</span><h3>Music and overlay go on</h3><p>Your event's design and a track are added on the spot. No editing later.</p></li>
+        <li class="step"><span class="step__n">5</span><h3>It's on your phone</h3><p>Scan the QR, or get it by text or email. Post it before the next song ends.</p></li>
       </ol>
     </div>
   </section>
 
-  <!-- ===== What's included ===== -->
-  <section class="section section--alt" id="included">
+  <!-- ===== Events ===== -->
+  <section class="section section--tint" id="events">
     <div class="container">
-      <span class="eyebrow center"><i class="dot"></i>EVERY BOOKING INCLUDES</span>
-      <h2 class="section__title center">Turn-key, attendant-run, stress-free</h2>
-      <ul class="included">
-        <li class="reveal"><span>◆</span>On-site attendant(s) start to finish</li>
-        <li class="reveal"><span>◆</span>Premium HD / GoPro capture</li>
-        <li class="reveal"><span>◆</span>Custom branded video overlay</li>
-        <li class="reveal"><span>◆</span>Unlimited sessions during your event</li>
-        <li class="reveal"><span>◆</span>Instant sharing — QR, text &amp; email</li>
-        <li class="reveal"><span>◆</span>Curated props for great reels</li>
-        <li class="reveal"><span>◆</span>Online gallery of every clip</li>
-        <li class="reveal"><span>◆</span>Delivery, setup &amp; teardown</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- ===== Reels gallery ===== -->
-  <section class="section" id="reels">
-    <div class="container">
-      <span class="eyebrow center"><i class="dot"></i>BOOTHS IN ACTION</span>
-      <h2 class="section__title center">See the reels</h2>
-      <p class="lede center">A taste of what your guests walk away with. Vertical, glossy, and ready to post.</p>
-      <!-- Four real sample reels (assets/video/reel-0N.mp4, 720x1290 silent H.264 + poster assets/img/reel-0N-poster.jpg) -->
-      <div class="reels">
-        <div class="reel reel--video reveal">
-          <video class="reel__video" src="assets/video/reel-01.mp4" poster="assets/img/reel-01-poster.jpg"
-                 muted loop playsinline autoplay preload="metadata" aria-label="Sample 360 booth reel 1"></video>
-          <span class="reel__tag">REEL 01</span>
-        </div>
-        <div class="reel reel--video reveal delay-1">
-          <video class="reel__video" src="assets/video/reel-02.mp4" poster="assets/img/reel-02-poster.jpg"
-                 muted loop playsinline autoplay preload="metadata" aria-label="Sample 360 booth reel 2"></video>
-          <span class="reel__tag">REEL 02</span>
-        </div>
-        <div class="reel reel--video reveal delay-2">
-          <video class="reel__video" src="assets/video/reel-03.mp4" poster="assets/img/reel-03-poster.jpg"
-                 muted loop playsinline autoplay preload="metadata" aria-label="Sample 360 booth reel 3"></video>
-          <span class="reel__tag">REEL 03</span>
-        </div>
-        <div class="reel reel--video reveal delay-3">
-          <video class="reel__video" src="assets/video/reel-04.mp4" poster="assets/img/reel-04-poster.jpg"
-                 muted loop playsinline autoplay preload="metadata" aria-label="Sample 360 booth reel 4"></video>
-          <span class="reel__tag">REEL 04</span>
-        </div>
-      </div>
-      <p class="reels__follow">Visit our Instagram for the latest reels —
-        <a href="https://www.instagram.com/kilpen_photography/" rel="noopener">@kilpen_photography ↗</a>
-      </p>
-    </div>
-  </section>
-
-  <!-- ===== Event types ===== -->
-  <section class="section section--alt" id="events">
-    <div class="container">
-      <span class="eyebrow center"><i class="dot"></i>PERFECT FOR</span>
-      <h2 class="section__title center">Every kind of celebration</h2>
+      <h2 class="section__title">Good for any room with a dance floor</h2>
+      <p class="lede">We've done a lot of Navy balls. We'd love to do your birthday too.</p>
       <div class="events">
-        <article class="event reveal"><h3>Military Formal Events</h3><p>Khaki Balls, Dining Outs, birthday balls and command celebrations — a keepsake for the whole mess.</p></article>
-        <article class="event reveal delay-1"><h3>Corporate &amp; Activations</h3><p>Branded content and buzz — every guest becomes an ambassador.</p></article>
-        <article class="event reveal delay-2"><h3>Parties &amp; Celebrations</h3><p>Birthdays, graduations, showers — the booth is the main event.</p></article>
-        <article class="event reveal delay-3"><h3>Nightlife &amp; Venues</h3><p>Turn your floor into a spectacle that pulls a crowd and a line.</p></article>
-        <article class="event reveal"><h3>Grand Openings</h3><p>Launch with shareable moments that put your brand in every feed.</p></article>
+        <article class="event">
+          <h3>Military balls and dining outs</h3>
+          <p>Khaki Balls, dining outs, birthday balls, command celebrations. A keepsake for the whole mess, with your command's emblem on every reel.</p>
+        </article>
+        <article class="event">
+          <h3>Parties and celebrations</h3>
+          <p>Birthdays, graduations, showers, reunions. The booth becomes the main event and the line never dies down.</p>
+        </article>
+        <article class="event">
+          <h3>Corporate and brand events</h3>
+          <p>Launches, activations, holiday parties. Every guest walks out with branded content they actually want to post.</p>
+        </article>
+        <article class="event">
+          <h3>Nightlife and venues</h3>
+          <p>Give the floor a spectacle. A 360 booth pulls a crowd, and the crowd pulls a line.</p>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- ===== Tips ===== -->
-  <section class="section section--red" id="tips">
+  <!-- ===== Pro tips (prop signs) ===== -->
+  <section class="section" id="tips">
     <div class="container">
-      <span class="eyebrow center"><i class="dot"></i>PRO TIPS</span>
-      <h2 class="section__title center">How to get an amazing reel</h2>
+      <h2 class="section__title">How to get a reel worth reposting</h2>
+      <p class="lede">Advice from the people who've watched a few thousand takes.</p>
       <div class="tips">
-        <div class="tip reveal"><span class="tip__n">01</span><p><strong>Move slow.</strong> A hair flip or smooth spin beats a frantic dance — slow motion loves intention.</p></div>
-        <div class="tip reveal delay-1"><span class="tip__n">02</span><p><strong>Grab props first.</strong> Confetti, sparklers, sunglasses, signs — pick them up before you step on.</p></div>
-        <div class="tip reveal delay-2"><span class="tip__n">03</span><p><strong>Move together.</strong> Count it out — a synchronized spin, wave, or pose looks incredible slowed down.</p></div>
-        <div class="tip reveal delay-3"><span class="tip__n">04</span><p><strong>Play to the lens.</strong> Hold eye contact and hit your pose as the camera comes around.</p></div>
-        <div class="tip reveal"><span class="tip__n">05</span><p><strong>Sync to the beat.</strong> Time your move to the drop and lean on trending audio when you post.</p></div>
-        <div class="tip reveal delay-1"><span class="tip__n">06</span><p><strong>Show the &lsquo;fit.</strong> Themed outfits and bold colors pop — this is your close-up.</p></div>
+        <div class="tip sign sign--pink"><strong>Move slow.</strong> A hair flip or a smooth spin beats a frantic dance. Slow motion loves intention.</div>
+        <div class="tip sign sign--yellow"><strong>Props first.</strong> Confetti, sparklers, sunglasses, signs — pick them up before you step on.</div>
+        <div class="tip sign sign--teal"><strong>Move together.</strong> Count it out. A synced spin or wave looks incredible slowed down.</div>
+        <div class="tip sign sign--yellow"><strong>Play to the lens.</strong> Hold eye contact and hit your pose as the camera comes around.</div>
+        <div class="tip sign sign--teal"><strong>Catch the drop.</strong> Time your move to the beat, then post it with trending audio.</div>
+        <div class="tip sign sign--pink"><strong>Show the fit.</strong> Bold colours and themed outfits pop. This is your close-up.</div>
       </div>
     </div>
   </section>
 
   <!-- ===== Pricing ===== -->
-  <section class="section section--alt" id="pricing">
-    <div class="container narrow center">
-      <span class="eyebrow center"><i class="dot"></i>PRICING</span>
-      <h2 class="section__title">Simple, all-inclusive pricing</h2>
-      <p class="lede">One flat rate covers the booth, an attendant, your custom overlay, unlimited sessions, instant sharing, and the online gallery. No surprise fees.</p>
-      <div class="price reveal">
-        <span class="price__from">Starting at</span>
-        <span class="price__v">$<span class="mono">800</span></span>
-        <span class="price__l">per event</span>
+  <section class="section section--tint" id="pricing">
+    <div class="container pricing">
+      <div class="pricing__copy">
+        <h2 class="section__title">One price. Everything's in it.</h2>
+        <p class="lede">The booth, an attendant who runs it start to finish, your custom overlay, unlimited takes, instant sharing and the gallery afterwards. No add-ons, no surprise fees.</p>
+        <ul class="included">
+          <li>On-site attendant, setup to teardown</li>
+          <li>HD capture at up to 120 fps</li>
+          <li>Custom overlay with your name, logo or emblem</li>
+          <li>Unlimited takes for the whole event</li>
+          <li>Instant sharing by QR, text and email</li>
+          <li>Props that photograph well</li>
+          <li>Online gallery of every clip</li>
+          <li>Delivery anywhere on O‘ahu</li>
+        </ul>
       </div>
-      <a href="#quote" class="btn btn--primary">Check My Date</a>
+      <div class="price">
+        <span class="price__from">Starting at</span>
+        <span class="price__v">$800</span>
+        <span class="price__l">per event</span>
+        <a href="#quote" class="btn btn--primary btn--full">Check my date</a>
+        <span class="price__note">We reply within 24 hours.</span>
+      </div>
     </div>
   </section>
 
   <!-- ===== FAQ ===== -->
   <section class="section" id="faq">
     <div class="container narrow">
-      <span class="eyebrow center"><i class="dot"></i>GOOD TO KNOW</span>
-      <h2 class="section__title center">Frequently asked</h2>
+      <h2 class="section__title">Good to know</h2>
       <div class="faq">
-        <details class="reveal"><summary>How much space does the booth need?</summary><p>About a 10×10&nbsp;ft area with a standard power outlet nearby. We handle the rest.</p></details>
-        <details class="reveal"><summary>How many guests can go at once?</summary><p>Up to three comfortably on the platform.</p></details>
-        <details class="reveal"><summary>Indoor or outdoor?</summary><p>Both — outdoor setups just need level ground and weather permitting.</p></details>
-        <details class="reveal"><summary>When do we get the reels?</summary><p>Instantly at the event via QR, text, or email, plus a full online gallery within 48&nbsp;hours.</p></details>
-        <details class="reveal"><summary>Do you travel between islands?</summary><p>Not at this time — we serve events on O&#699;ahu.</p></details>
-        <details class="reveal"><summary>How do we lock in our date?</summary><p>Send a quote request below and we&rsquo;ll confirm availability and hold your date. We reply within 24&nbsp;hours.</p></details>
+        <details><summary>How much space does the booth need?</summary><p>About a 10×10 ft area with a standard power outlet nearby. We handle the rest.</p></details>
+        <details><summary>How many guests can go at once?</summary><p>Up to three comfortably on the platform.</p></details>
+        <details><summary>Indoor or outdoor?</summary><p>Both. Outdoor setups need level ground and dry weather.</p></details>
+        <details><summary>When do we get the reels?</summary><p>At the event, instantly, by QR, text or email. The full online gallery follows within 48 hours.</p></details>
+        <details><summary>Do you travel between islands?</summary><p>Not yet — we serve events on O‘ahu.</p></details>
+        <details><summary>How do we lock in our date?</summary><p>Send the form below. We confirm availability and hold your date, usually the same day.</p></details>
       </div>
     </div>
   </section>
@@ -258,10 +236,9 @@
   <section class="quote" id="quote">
     <div class="container quote__grid">
       <div class="quote__copy">
-        <span class="eyebrow"><i class="dot"></i>CHECK YOUR DATE</span>
-        <h2 class="section__title">Let&rsquo;s make your event unforgettable.</h2>
-        <p>Tell us about your event and we&rsquo;ll confirm availability, walk you through options, and get you a quote. No pressure — just answers.</p>
-        <p class="quote__promise"><span class="sunrise-dot" aria-hidden="true"></span>We reply within 24 hours.</p>
+        <h2 class="section__title">Check your date</h2>
+        <p>Tell us about the event and we'll come back with availability and a quote. No pressure, just answers.</p>
+        <img class="quote__penguin" src="assets/img/kilpen-penguin.png" alt="" width="900" height="900">
       </div>
       <!-- Submits via fetch (booth.js) to the n8n webhook /webhook/photography-quote → email to info@kilpen.photography. "website" is a honeypot: humans never see it, bots fill it. -->
       <form class="quote__form" id="quoteForm" novalidate>
@@ -282,13 +259,13 @@
           </label>
         </div>
         <div class="row2">
-          <label><span>Venue / location</span><input type="text" name="location" placeholder="City or venue"></label>
-          <label><span>Guest count</span><input type="text" name="guests" placeholder="Approx."></label>
+          <label><span>Venue or location</span><input type="text" name="location" placeholder="City or venue"></label>
+          <label><span>Guest count</span><input type="text" name="guests" placeholder="Roughly"></label>
         </div>
-        <label><span>Anything else?</span><textarea name="message" rows="4" placeholder="Tell us about your event…"></textarea></label>
+        <label><span>Anything else?</span><textarea name="message" rows="4" placeholder="Theme, timing, the vibe you're after…"></textarea></label>
         <label class="hp" aria-hidden="true"><span>Website</span><input type="text" name="website" tabindex="-1" autocomplete="off"></label>
-        <button type="submit" class="btn btn--primary btn--full">Request my date</button>
-        <p class="quote__ok" id="quoteOk" hidden>Thanks! Your request is in — we&rsquo;ll be in touch within 24 hours.</p>
+        <button type="submit" class="btn btn--primary btn--full btn--lg">Send my request</button>
+        <p class="quote__ok" id="quoteOk" hidden>Sent. We'll be in touch within 24 hours.</p>
         <p class="quote__err" id="quoteErr" hidden></p>
       </form>
     </div>
@@ -297,22 +274,18 @@
   <!-- ===== Footer ===== -->
   <footer class="foot">
     <div class="container foot__inner">
-      <a href="/" class="foot__brand"><img src="assets/img/kilpen-wordmark-dark.png" alt="KilPen Photography" height="34"></a>
+      <a href="/" class="foot__brand"><img src="assets/img/kilpen-wordmark-light.png" alt="KilPen Photography" width="160" height="49"></a>
       <nav class="foot__links" aria-label="Footer">
-        <a href="#what">What it is</a><a href="#reels">Reels</a><a href="#events">Events</a><a href="#pricing">Pricing</a>
-        <a href="#quote">Check my date</a>
+        <a href="#what">What it is</a><a href="#reels">Reels</a><a href="#events">Events</a><a href="#pricing">Pricing</a><a href="#quote">Check my date</a>
       </nav>
-      <div class="foot__social">
-        <a href="https://www.instagram.com/kilpen_photography/" rel="noopener">Instagram ↗</a>
-      </div>
+      <a class="foot__social" href="https://www.instagram.com/kilpen_photography/" rel="noopener">Instagram</a>
     </div>
     <div class="container foot__legal">
-      <span>INSURED · HAWAII</span>
-      <span>© <span id="yr"></span> KilPen Photography · a <a href="https://kilpen.com" rel="noopener">KilPen</a> company</span>
+      <span>Insured. Based on O‘ahu.</span>
+      <span>© <span id="yr"></span> KilPen Photography, a <a href="https://kilpen.com" rel="noopener">KilPen</a> company</span>
     </div>
   </footer>
 
-  <script src="assets/js/booth.js?v=20260918"></script>
-  <script src="assets/js/orbit.js?v=20260815"></script>
+  <script src="assets/js/booth.js?v=20260930"></script>
 </body>
 </html>
